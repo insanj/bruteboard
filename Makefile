@@ -1,4 +1,6 @@
-run:
+deps:
 	pip install pyperclip
 	pip install pypiwin32
-	py -2 bruteboard.py
+
+run: deps
+	py -2 run.py
