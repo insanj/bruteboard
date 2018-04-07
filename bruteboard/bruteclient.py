@@ -9,10 +9,7 @@ class bruteclient:
 
 	def __init__(self, app_name="Firefox"):
 		self.app_name = app_name
-		self.shell = self.shell()
-
-	def shell(self):
-		return win32com.client.Dispatch("WScript.Shell")
+		self.shell = win32com.client.Dispatch("WScript.Shell")
 
 	def activate(self):
 		self.shell.AppActivate(self.app_name)

@@ -1,6 +1,14 @@
-deps:
-	pip install pyperclip
-	pip install pypiwin32
+PYTHON=py -2
 
-run: deps
-	py -2 run.py
+all: clean setup run clean
+
+run:
+	$(PYTHON) run.py
+
+setup:
+	conda install -y pip
+	pip install pypiwin32
+	conda install -y psutil
+
+clean:
+	del /S *.pyc

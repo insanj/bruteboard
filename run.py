@@ -1,4 +1,4 @@
 from bruteboard import *
 
-brute = bruterunner()
+brute = bruterunner.bruterunner()
 brute.force()
